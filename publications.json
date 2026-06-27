@@ -148,7 +148,14 @@
         "text": "📣 Nota de prensa",
         "class": "divulgacion",
         "url": "https://www.agenciasinc.es/Noticias/Ensenar-el-metodo-cientifico-en-institutos-demuestra-ser-util-para-desmontar-falsos-mitos"
+      },
+      {
+        "text": "📣 Post divulgativo",
+        "class": "divulgacion",
+        "url": "https://theconversation.com/asi-inculcamos-una-mentalidad-cientifica-en-adolescentes-para-protegerlos-de-las-pseudociencias-237504"
       }
+      
+      
     ]
   },
   {
@@ -160,11 +167,7 @@
     "pages": "",
     "doi": "10.1186/s41235-024-00567-5",
     "badges": [
-      {
-        "text": "📣 Medios",
-        "class": "divulgacion",
-        "url": "https://www.infobae.com/tendencias/2026/03/25/5-tecnicas-de-estudio-sencillas-que-mejoran-la-memoria-segun-la-ciencia/"
-      },
+
       {
         "text": "📣 Post divulgativo",
         "class": "divulgacion",
@@ -516,7 +519,7 @@
     "issue": "",
     "pages": "",
     "doi": "",
-      "url": "https://mitpress.mit.edu/9780262537049/pseudoscience/",
+    "doiUrl": "https://mitpress.mit.edu/9780262537049/pseudoscience/",
     "badges": []
   } ,  
   
@@ -551,7 +554,15 @@
     "issue": "10(7)",
     "pages": "e0131378",
     "doi": "10.1371/journal.pone.0131378",
-    "badges": []
+    "badges": [
+      {
+        "class": "divulgacion",
+        "url": "https://theconversation.com/por-que-hay-gente-inteligente-que-cree-en-fantasmas-y-supersticiones-103954",
+        "text": "📣 Post divulgativo"
+        
+      }
+      
+    ]
   } ,  
   
     {
@@ -617,6 +628,7 @@
     "issue": "12(1)",
     "pages": "261-270",
     "doi": "",
+    "doiUrl": "https://revistas.javeriana.edu.co/index.php/revPsycho/article/view/1817/3979",    
     "badges": []
   } ,
 
@@ -705,7 +717,8 @@
     "journal": "The Psychological Record",
     "issue": "59",
     "pages": "551-562",
-    "doi": "",
+    "doi": "10.1007/BF03395681",
+    "doiUrl": "",
     "badges": []
   } ,
   
