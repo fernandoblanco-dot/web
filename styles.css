@@ -82,6 +82,7 @@ h1 {
   color: var(--primary);
 }
 
+
 .summary {
   max-width: 700px;
   margin: auto;
@@ -402,6 +403,27 @@ footer {
 	color: #d97706;
 	
 }
+
+.intro {
+  margin-bottom: 2.5rem;
+  font-size: 1.05rem;
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.card ul {
+  padding-left: 1.25rem;
+}
+
+.card li {
+  margin-bottom: .9rem;
+}
+
+
 
 /* Móvil */
 
