@@ -447,6 +447,14 @@
         "class": "data",
         "url": "https://osf.io/zmcs4/"
       },
+      
+            {
+        "text": "📣 Post divulgativo",
+        "class": "divulgacion",
+        "url": "https://www.cienciacognitiva.org/?p=1584"
+      },
+      
+      
       {
         "text": "🧵 Hilo Twitter/X",
         "class": "divulgacion",
@@ -560,8 +568,14 @@
         "url": "https://theconversation.com/por-que-hay-gente-inteligente-que-cree-en-fantasmas-y-supersticiones-103954",
         "text": "📣 Post divulgativo"
         
-      }
-      
+      },
+
+      {
+        "class": "divulgacion",
+        "url": "https://www.cienciacognitiva.org/?p=1176",
+        "text": "📣 Post divulgativo"
+        
+      }      
     ]
   } ,  
   

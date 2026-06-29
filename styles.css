@@ -96,6 +96,7 @@ h1 {
   gap: 1rem;
   margin: 2rem 0;
   flex-wrap: wrap;
+  
 }
 
 .socials a {
@@ -109,6 +110,7 @@ h1 {
 .socials img {
   width: 40px;
   height: 40px;
+  border-radius: 50%;
 }
 
 .button {
@@ -270,7 +272,7 @@ footer {
 
 
 /* seccion outreach */
-```css
+
 /* ==========================
    OUTREACH PAGE
    ========================== */
@@ -423,6 +425,24 @@ footer {
   margin-bottom: .9rem;
 }
 
+/* chips para los enlaces */
+
+.chip {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #3b5bdb;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.chip:hover {
+    background: #3b5bdb;
+    color: white;
+}
 
 
 /* Móvil */
