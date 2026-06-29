@@ -532,3 +532,25 @@ footer {
 
 }
 
+
+.timeline-item a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  background-color: rgba(35, 78, 112, 0.06); /* Fondo muy sutil */
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.timeline-item a:hover {
+  background-color: var(--primary);
+  color: #ffffff; /* Invierte colores al hacer hover */
+  transform: translateY(-1px);
+}
+
