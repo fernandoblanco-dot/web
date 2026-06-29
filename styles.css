@@ -444,6 +444,69 @@ footer {
     color: white;
 }
 
+/* ===========================
+   FILTROS
+=========================== */
+
+.timeline-filters{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.6rem;
+    margin:1.5rem 0 2rem;
+}
+
+.filter-btn{
+
+    border:none;
+    border-radius:999px;
+    padding:.45rem .95rem;
+    font:inherit;
+    cursor:pointer;
+
+    background:#ececec;
+    color:#555;
+
+    transition:.2s;
+}
+
+.filter-btn:hover{
+    transform:translateY(-1px);
+}
+
+/* Colores de cada categoría */
+
+.filter-btn.talk{
+    background:#fde9d7;
+    color:#8b4a00;
+}
+
+.filter-btn.course{
+    background:#dcefff;
+    color:#0063b1;
+}
+
+.filter-btn.media{
+    background:#eadfff;
+    color:#5d2ca5;
+}
+
+.filter-btn.article{
+    background:#dff6df;
+    color:#207020;
+}
+
+/* Activo */
+
+.filter-btn.active{
+    box-shadow:0 0 0 3px currentColor inset;
+    font-weight:600;
+}
+
+.filter-btn .count{
+    opacity:.75;
+    font-weight:normal;
+}
+
 
 /* Móvil */
 

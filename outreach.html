@@ -5,6 +5,160 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Outreach</title>
   <link rel="stylesheet" href="styles.css">
+	<script>
+	document.addEventListener("DOMContentLoaded", () => {
+
+    const buttons = document.querySelectorAll(".filter-btn");
+    const cards = document.querySelectorAll(".timeline-item");
+
+    const active = new Set();
+
+    //--------------------------------------------------
+    // Contadores
+    //--------------------------------------------------
+
+    const total = cards.length;
+
+    document.querySelector('[data-filter="all"] .count').textContent =
+        `(${total})`;
+
+    ["talk","course","media","article"].forEach(type=>{
+
+        const n = document.querySelectorAll(
+            `.timeline-item .type-badge.${type}`
+        ).length;
+
+        document.querySelector(`[data-filter="${type}"] .count`)
+            .textContent = `(${n})`;
+
+    });
+
+    //--------------------------------------------------
+    // Botones
+    //--------------------------------------------------
+
+    buttons.forEach(button=>{
+
+        button.addEventListener("click",()=>{
+
+            const filter = button.dataset.filter;
+
+            // TODOS
+
+            if(filter==="all"){
+
+                active.clear();
+
+                buttons.forEach(b=>b.classList.remove("active"));
+
+                button.classList.add("active");
+
+                update();
+
+                return;
+            }
+
+            // Desactivar TODOS
+
+            document
+                .querySelector('[data-filter="all"]')
+                .classList.remove("active");
+
+            // Activar/desactivar categoría
+
+            if(active.has(filter)){
+
+                active.delete(filter);
+                button.classList.remove("active");
+
+            }else{
+
+                active.add(filter);
+                button.classList.add("active");
+
+            }
+
+            // Si no queda ninguna activa → TODOS
+
+            if(active.size===0){
+
+                document
+                    .querySelector('[data-filter="all"]')
+                    .classList.add("active");
+
+            }
+
+            update();
+
+        });
+
+    });
+
+    //--------------------------------------------------
+    // Mostrar/ocultar tarjetas
+    //--------------------------------------------------
+
+    function update(){
+
+        cards.forEach(card=>{
+
+            const badge = card.querySelector(".type-badge");
+
+            const type = [...badge.classList].find(c=>
+                ["talk","course","media","article"].includes(c)
+            );
+
+            const visible =
+                active.size===0 || active.has(type);
+
+            card.style.display = visible ? "" : "none";
+
+        });
+
+        updateYears();
+
+    }
+
+    //--------------------------------------------------
+    // Ocultar años vacíos
+    //--------------------------------------------------
+
+    function updateYears(){
+
+        document.querySelectorAll(".timeline-year").forEach(year=>{
+
+            let visible=false;
+
+            let node=year.nextElementSibling;
+
+            while(node && !node.classList.contains("timeline-year")){
+
+                if(
+                    node.classList.contains("timeline-item") &&
+                    node.style.display!=="none"
+                ){
+                    visible=true;
+                    break;
+                }
+
+                node=node.nextElementSibling;
+            }
+
+            year.style.display=visible ? "" : "none";
+
+        });
+
+    }
+
+});
+	
+	
+	
+	
+	</script>
+	
+	
+	
 </head>
 <body>
 
@@ -91,7 +245,31 @@
 	Artículos, charlas, cursos y colaboración con los medios.
  </h2>
  
- <h2><span class="type-badge talk">Charlas/Conferencias</span> · <span class="type-badge course">Cursos</span> · <span class="type-badge media">Colaboraciones con medios</span> · <span class="type-badge article">Artículos y textos</span></h2>
+ <div class="timeline-filters">
+
+    <button class="filter-btn active" data-filter="all">
+        Todos <span class="count"></span>
+    </button>
+
+    <button class="filter-btn talk" data-filter="talk">
+        Charlas/Conferencias <span class="count"></span>
+    </button>
+
+    <button class="filter-btn course" data-filter="course">
+        Cursos <span class="count"></span>
+    </button>
+
+    <button class="filter-btn media" data-filter="media">
+        Colaboraciones con medios <span class="count"></span>
+    </button>
+
+    <button class="filter-btn article" data-filter="article">
+        Artículos y textos <span class="count"></span>
+    </button>
+
+</div>
+	
+	
  
 <div class="timeline">
 
